@@ -7,3 +7,43 @@ body {
   font-size: 1.6rem;
 }
 
+.navigation {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  padding: 1.4rem 0;
+  background: #000;
+  color: #ccc;
+}
+
+.navigation li {
+  list-style-type: none;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.navigation-item {
+  padding: 1.4rem;
+  display: block;
+  text-decoration: none;
+  color: #ccc;
+}
+
+.navigation-item:hover,
+.navigation-item:focus {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+@media screen and (min-width: 530px) {
+  .navigation {
+    flex-direction: row;
+    justify-content: end;
+    padding-right: 1rem;
+  }
+
+  .navigation-item {
+    border-radius: 4px;
+  }
+}
