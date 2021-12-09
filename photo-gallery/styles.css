@@ -7,3 +7,33 @@ body {
   font-size: 1.6rem;
 }
 
+.photo-gallery {
+  margin: 0;
+
+  display: grid;
+  grid-gap: 10px;
+}
+
+.photo-gallery img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .photo-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .photo-gallery {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      '- focus focus'
+      '- focus focus';
+  }
+  .photo-gallery img:nth-of-type(2) {
+    grid-area: focus;
+  }
+}
