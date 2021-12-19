@@ -7,6 +7,15 @@ body {
   font-size: 1.6rem;
 }
 
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+h2 {
+  scroll-margin-top: 4em;
+}
+
 .navigation {
   display: flex;
   flex-direction: column;
